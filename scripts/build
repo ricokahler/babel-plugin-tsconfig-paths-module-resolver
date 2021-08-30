@@ -1,0 +1,11 @@
+#!/bin/bash
+
+rm -rf dist
+
+npx babel                 \
+  -x .ts                  \
+  --ignore /**/*.test.ts  \
+  --out-dir ./dist        \
+  ./src
+
+tsc -p ./tsconfig-build.json

@@ -1,0 +1,17 @@
+.github
+.DS_Store
+coverage
+examples
+node_modules
+scripts
+src
+.babelrc
+.eslintrc
+.gitignore
+.npmignore
+.releaserc.json
+jest.config.js
+package-lock.json
+renovate.json
+tsconfig-build.json
+tsconfig.json

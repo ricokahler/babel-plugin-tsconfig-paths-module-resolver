@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["umbrella/*", "*"]
+    }
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["**/node_modules"]
+}
