@@ -3,6 +3,10 @@
 [![npm](https://badgen.net/npm/v/babel-plugin-tsconfig-paths-module-resolver)](https://www.npmjs.com/package/babel-plugin-tsconfig-paths-module-resolver) [![Github Actions](https://badgen.net/github/checks/ricokahler/babel-plugin-tsconfig-paths-module-resolver)](https://github.com/ricokahler/babel-plugin-tsconfig-paths-module-resolver/actions) [![codecov](https://codecov.io/gh/ricokahler/babel-plugin-tsconfig-paths-module-resolver/branch/main/graph/badge.svg?token=2cQuXwu8Gq)](https://codecov.io/gh/ricokahler/babel-plugin-tsconfig-paths-module-resolver) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 > Combines [`babel-plugin-module-resolver`][0] and [`tsconfig-paths`][1] to make a babel plugin that resolves [tsconfig paths][2].
+>
+> Use tsconfig-paths in any bundler that supports a custom babel config.
+
+
 
 This library is a re-export of [`babel-plugin-module-resolver`](https://github.com/tleunen/babel-plugin-module-resolver) pre-configured with [tsconfig paths][2] support via the package [`tsconfig-paths`][1].
 
