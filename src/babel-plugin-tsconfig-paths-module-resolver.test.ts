@@ -1,4 +1,4 @@
-import { babelPluginTsconfigPathsModuleResolver } from "./babel-plugin-tsconfig-paths-module-resolver";
+import { babelPluginTsconfigPathsModuleResolver } from './babel-plugin-tsconfig-paths-module-resolver';
 
 const mockManipulateOptions = jest.fn(function (this: any, ...args) {
   return {
@@ -16,17 +16,17 @@ const mockPre = jest.fn(function (this: any, ...args) {
   };
 });
 
-jest.mock("babel-plugin-module-resolver", () =>
+jest.mock('babel-plugin-module-resolver', () =>
   jest.fn((...args) => ({
     args,
     extraOption: true,
     manipulateOptions: mockManipulateOptions,
     pre: mockPre,
-  }))
+  })),
 );
 
-describe("babelPluginTsconfigPathsModuleResolver", () => {
-  it("returns a pre-configured version of babel-plugin-module-resolve", () => {
+describe('babelPluginTsconfigPathsModuleResolver', () => {
+  it('returns a pre-configured version of babel-plugin-module-resolve', () => {
     const mockArgs = { mockArgs: true };
     const result = babelPluginTsconfigPathsModuleResolver(mockArgs);
 
@@ -76,7 +76,6 @@ describe("babelPluginTsconfigPathsModuleResolver", () => {
 Object {
   "mockThis": true,
   "opts": Object {
-    "_originalResolvePath": [Function],
     "extensions": Array [
       ".ts",
       ".tsx",

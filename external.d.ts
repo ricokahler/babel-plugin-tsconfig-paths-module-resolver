@@ -205,10 +205,6 @@ declare module 'babel-plugin-module-resolver' {
      * [0]: https://docs.npmjs.com/misc/config#loglevel
      */
     logLevel?: string;
-    /**
-     * @internal
-     */
-    _originalResolvePath?: ResolvePath;
   }
 
   export const resolvePath: ResolvePath;

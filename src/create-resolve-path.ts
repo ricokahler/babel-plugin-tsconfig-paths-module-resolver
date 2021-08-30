@@ -3,6 +3,7 @@ import { createMatchPath, loadConfig } from 'tsconfig-paths';
 import {
   resolvePath as defaultResolvePath,
   ResolvePath,
+  BabelPluginModuleResolveOptions,
 } from 'babel-plugin-module-resolver';
 import { defaultExtensions } from './default-extensions';
 
@@ -16,10 +17,13 @@ export function createResolvePath(): ResolvePath {
       configLoaderResult.paths,
     );
 
-  return function resolvePath(...args) {
-    const [sourcePath, currentFile, opts] = args;
-    const fallbackResolvePath = opts._originalResolvePath || defaultResolvePath;
+  return function resolvePath(sourcePath, currentFile, opts) {
+    const fallbackResolvePath = (opts as any)._fromNested
+      ? defaultResolvePath
+      : opts.resolvePath || defaultResolvePath;
+
     const extensions = opts.extensions || defaultExtensions;
+    const nextOpts = { ...opts, _fromNested: true };
 
     if (!matchPath) {
       if (opts.logLevel !== 'silent') {
@@ -32,7 +36,7 @@ export function createResolvePath(): ResolvePath {
         );
       }
 
-      return fallbackResolvePath(...args);
+      return fallbackResolvePath(sourcePath, currentFile, nextOpts);
     }
 
     const matchPathResult = matchPath(
@@ -50,6 +54,6 @@ export function createResolvePath(): ResolvePath {
       return relativePath.startsWith('./') ? relativePath : `./${relativePath}`;
     }
 
-    return fallbackResolvePath(...args);
+    return fallbackResolvePath(sourcePath, currentFile, nextOpts);
   };
 }
