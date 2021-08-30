@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A babel plugin that combines babel-plugin-module-resolver and tsconfig-paths to resolve tsconfig paths",
   "main": "./index.js",
+  "types": "./index.d.ts",
   "sideEffects": false,
   "scripts": {
     "test": "jest",
