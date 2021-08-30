@@ -46,6 +46,8 @@ Specify the plugin in your `.babelrc` (or [equivalent configuration file](https:
 }
 ```
 
+That's it! [Paths from your tsconfig.json][2] should now work!
+
 ## Advanced usage
 
 `babel-plugin-tsconfig-paths-module-resolver` accepts the same options as [`babel-plugin-module-resolver`](https://github.com/tleunen/babel-plugin-module-resolver/blob/master/DOCS.md).
