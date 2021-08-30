@@ -9,6 +9,7 @@ src
 .eslintrc
 .gitignore
 .npmignore
+.prettierrc
 .releaserc.json
 jest.config.js
 package-lock.json
