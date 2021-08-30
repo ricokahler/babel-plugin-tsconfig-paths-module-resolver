@@ -18,7 +18,7 @@ export function createResolvePath(): ResolvePath {
 
   return function resolvePath(...args) {
     const [sourcePath, currentFile, opts] = args;
-    const fallbackResolvePath = opts.resolvePath || defaultResolvePath;
+    const fallbackResolvePath = opts._originalResolvePath || defaultResolvePath;
     const extensions = opts.extensions || defaultExtensions;
 
     if (!matchPath) {

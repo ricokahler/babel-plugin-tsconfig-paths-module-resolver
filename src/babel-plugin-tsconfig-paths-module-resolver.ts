@@ -19,6 +19,9 @@ function babelPluginTsconfigPathsModuleResolver(
 
     opts.extensions = opts.extensions || defaultExtensions;
     opts.resolvePath = opts.resolvePath || createResolvePath();
+    if (!opts._originalResolvePath && opts.resolvePath) {
+      opts._originalResolvePath = opts.resolvePath;
+    }
   }
 
   return {

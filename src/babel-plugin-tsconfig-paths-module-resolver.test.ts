@@ -73,21 +73,22 @@ describe("babelPluginTsconfigPathsModuleResolver", () => {
     `);
 
     expect(mockThis).toMatchInlineSnapshot(`
-      Object {
-        "mockThis": true,
-        "opts": Object {
-          "extensions": Array [
-            ".ts",
-            ".tsx",
-            ".js",
-            ".jsx",
-            ".es",
-            ".es6",
-            ".mjs",
-          ],
-          "resolvePath": [Function],
-        },
-      }
-    `);
+Object {
+  "mockThis": true,
+  "opts": Object {
+    "_originalResolvePath": [Function],
+    "extensions": Array [
+      ".ts",
+      ".tsx",
+      ".js",
+      ".jsx",
+      ".es",
+      ".es6",
+      ".mjs",
+    ],
+    "resolvePath": [Function],
+  },
+}
+`);
   });
 });

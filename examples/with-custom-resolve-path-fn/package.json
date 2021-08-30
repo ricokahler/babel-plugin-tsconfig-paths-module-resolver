@@ -1,0 +1,10 @@
+{
+  "name": "@babel-plugin-tsconfig-paths-module-resolver/with-custom-resolve-path-fn",
+  "private": true,
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "babel -x .ts ./src --out-dir ./dist"
+  },
+  "license": "MIT"
+}

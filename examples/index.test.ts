@@ -27,4 +27,19 @@ describe('examples', () => {
       ]
     `);
   });
+
+  test('with-custom-resolve-path-fn', () => {
+    const standard = jest.requireActual(
+      '@babel-plugin-tsconfig-paths-module-resolver/with-custom-resolve-path-fn',
+    ).default;
+
+    expect(standard).toMatchInlineSnapshot(`
+      Array [
+        "from src/bar/a",
+        "from src/foo/b",
+        "from umbrella/baz/c",
+        "from special",
+      ]
+    `);
+  });
 });

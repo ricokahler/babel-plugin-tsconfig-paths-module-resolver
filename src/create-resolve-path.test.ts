@@ -47,7 +47,7 @@ describe('createResolvePath', () => {
 
     const resolvePath = createResolvePath();
     const result = resolvePath('./source-path', './current-file', {
-      resolvePath: () => 'example result',
+      _originalResolvePath: () => 'example result',
     });
 
     expect(result).toBe('example result');
