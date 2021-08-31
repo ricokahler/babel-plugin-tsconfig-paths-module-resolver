@@ -6,8 +6,6 @@
 >
 > Use tsconfig-paths in any bundler that supports a custom babel config.
 
-
-
 This library is a re-export of [`babel-plugin-module-resolver`](https://github.com/tleunen/babel-plugin-module-resolver) pre-configured with [tsconfig paths][2] support via the package [`tsconfig-paths`][1].
 
 It aims to be stable by relying on these already widely-used packages to power the heavy logic:
@@ -18,6 +16,15 @@ It aims to be stable by relying on these already widely-used packages to power t
 | [`tsconfig-paths`][1]               | [![tsconfig-paths weekly downloads][5]][6]               |
 
 These dependencies are automatically updated via [renovate bot](https://github.com/renovatebot/renovate) and [semantic release](https://github.com/semantic-release/semantic-release).
+
+---
+
+**How is this different from [`babel-plugin-tsconfig-paths`](https://github.com/Js-Brecht/babel-plugin-tsconfig-paths)?**
+
+1. It does less — as stated above, this library depends on battled tested libs ([`tsconfig-paths`][1] and [`babel-plugin-module-resolver`][0]) to do the actual logic. The source code for this library is around ~100 SLOC which makes it easy to test and maintain.
+2. It re-exports [`babel-plugin-module-resolver`][0] — giving you all the features of that babel plugin including [custom resolve functions](#resolvepath-and-createresolvepath).
+
+---
 
 ## Installation
 
