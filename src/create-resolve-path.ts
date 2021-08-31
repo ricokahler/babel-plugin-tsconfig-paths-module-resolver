@@ -3,7 +3,6 @@ import { createMatchPath, loadConfig } from 'tsconfig-paths';
 import {
   resolvePath as defaultResolvePath,
   ResolvePath,
-  BabelPluginModuleResolveOptions,
 } from 'babel-plugin-module-resolver';
 import { defaultExtensions } from './default-extensions';
 
