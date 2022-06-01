@@ -44,9 +44,9 @@
   "homepage": "https://github.com/ricokahler/babel-plugin-tsconfig-paths-module-resolver#readme",
   "devDependencies": {
     "@babel/cli": "7.17.10",
-    "@babel/core": "7.17.10",
-    "@babel/preset-env": "7.17.10",
-    "@babel/preset-typescript": "7.16.7",
+    "@babel/core": "7.18.2",
+    "@babel/preset-env": "7.18.2",
+    "@babel/preset-typescript": "7.17.12",
     "@types/jest": "27.0.1",
     "@typescript-eslint/eslint-plugin": "4.29.3",
     "@typescript-eslint/parser": "4.29.3",
