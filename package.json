@@ -54,14 +54,14 @@
     "eslint": "7.32.0",
     "eslint-config-react-app": "6.0.0",
     "eslint-plugin-flowtype": "5.10.0",
-    "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-jsx-a11y": "6.6.1",
-    "eslint-plugin-react": "7.31.8",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "4.6.2",
     "jest": "27.1.0",
-    "prettier": "2.7.1",
+    "prettier": "2.8.8",
     "semantic-release": "25.0.3",
-    "typescript": "4.8.4"
+    "typescript": "4.9.5"
   },
   "dependencies": {
     "babel-plugin-module-resolver": "^4.1.0",
